@@ -8,6 +8,7 @@ import android.text.Spanned;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -70,6 +71,25 @@ public class MainActivity extends AppCompatActivity {
 
     public void mine(View view) {
         GlobalService.getInstance().getiMineService().startMineActivity(this);
+    }
+
+    public void customViewClick(View view) {
+        Log.e("jianzhang", "customViewClick");
+    }
+
+    public void goSplashView(View view) {
+        Intent intent = new Intent(this, SplashActivity.class);
+        startActivity(intent);
+    }
+
+    public void goErazerView(View view) {
+        Intent intent = new Intent(this, ErazerActivity.class);
+        startActivity(intent);
+    }
+
+    public void goBezier(View view) {
+        Intent intent = new Intent(this, BezierTestActivity.class);
+        startActivity(intent);
     }
 
 
