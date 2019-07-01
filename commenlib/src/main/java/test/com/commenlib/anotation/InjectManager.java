@@ -9,6 +9,7 @@ import java.lang.reflect.Method;
 /**
  * Created by zhangjian on 2019/5/17 10:47
  * des:just used in activity
+ * 仿照市面上的注解框架写的一个例子
  */
 public class InjectManager {
     public static final String TAG = "InjectManager";
