@@ -18,4 +18,13 @@
         <item name="android:background">#fff</item>
         <item name="android:maxWidth">200dp</item>
     </style>
+
+    <declare-styleable name="PercentRelativeLayout">
+        <attr name="widthPercent" format="float"></attr>
+        <attr name="heightPercent" format="float"></attr>
+        <attr name="marginLeftPercent" format="float"></attr>
+        <attr name="marginRightPercent" format="float"></attr>
+        <attr name="marginTopPercent" format="float"></attr>
+        <attr name="marginBottomPercent" format="float"></attr>
+    </declare-styleable>
 </resources>

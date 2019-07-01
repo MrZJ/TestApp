@@ -20,6 +20,9 @@
         <activity android:name=".SplashActivity" />
         <activity android:name=".ErazerActivity" />
         <activity android:name=".BezierTestActivity" />
+        <activity android:name=".PathMeasureActivity" />
+        <activity android:name=".PercentActivity" />
+        <activity android:name=".PaintActivity" />
     </application>
 
 </manifest>

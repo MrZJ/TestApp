@@ -43,10 +43,28 @@
             android:layout_height="wrap_content"
             android:onClick="goErazerView"
             android:text="跳转到ErazerView" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="goBezier"
             android:text="跳转到贝塞尔曲线" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goPathMeasure"
+            android:text="跳转到PathMesure" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goPercentLayout"
+            android:text="跳转到PercentRelativeLayout" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="paintTest"
+            android:text="跳转到paint练习" />
+
     </LinearLayout>
 </ScrollView>

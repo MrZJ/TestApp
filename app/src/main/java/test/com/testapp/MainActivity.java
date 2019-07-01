@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
         EventBus.getInstance().regist(this);
         MyFilter[] filters = new MyFilter[1];
         filters[0] = new MyFilter();
-//        et = findViewById(R.id.et);
-        et.setFilters(filters);
         Disposable disposable1 = Observable.just("name", "sex", "age", "skil")
                 .doOnSubscribe(disposable -> {
                     Log.e("rxjava", "subscribe" + disposable);
@@ -92,6 +90,20 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goPathMeasure(View view) {
+        Intent intent = new Intent(this, PathMeasureActivity.class);
+        startActivity(intent);
+    }
+
+    public void goPercentLayout(View view) {
+        Intent intent = new Intent(this, PercentActivity.class);
+        startActivity(intent);
+    }
+
+    public void paintTest(View view) {
+        Intent intent = new Intent(this, PaintActivity.class);
+        startActivity(intent);
+    }
 
     class MyFilter implements InputFilter {
 
