@@ -12,5 +12,9 @@ public class PaintActivity extends FragmentActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paint);
+        LoadingView loadingView = findViewById(R.id.loadingView);
+        loadingView.addBitmap(R.drawable.beauty);
+        loadingView.addBitmap(R.mipmap.result);
+        loadingView.start();
     }
 }

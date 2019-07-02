@@ -34,32 +34,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         InjectManager.inject(this);
         EventBus.getInstance().regist(this);
-        MyFilter[] filters = new MyFilter[1];
-        filters[0] = new MyFilter();
-        Disposable disposable1 = Observable.just("name", "sex", "age", "skil")
-                .doOnSubscribe(disposable -> {
-                    Log.e("rxjava", "subscribe" + disposable);
-                })
-                .observeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe((String s) -> {
-                    Log.e("rxjava", "subscribe" + s);
-                });
-
-//        Disposable subscribe = Observable
-//                .create((ObservableOnSubscribe<Integer>) e -> {
-//                    int i = 0;
-//                    while (true) {
-//                        i++;
-//                        e.onNext(i);
-//                    }
-//                })
-//                .subscribeOn(Schedulers.newThread())
-//                .observeOn(Schedulers.newThread())
-//                .subscribe(integer -> {
-//                    Thread.sleep(5000);
-//                    System.out.println(integer);
-//                });
     }
 
     public void login(View view) {
@@ -102,6 +76,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void paintTest(View view) {
         Intent intent = new Intent(this, PaintActivity.class);
+        startActivity(intent);
+    }
+
+    public void goFlowLayout(View view) {
+        Intent intent = new Intent(this, FlowActivity.class);
         startActivity(intent);
     }
 

@@ -23,6 +23,7 @@
         <activity android:name=".PathMeasureActivity" />
         <activity android:name=".PercentActivity" />
         <activity android:name=".PaintActivity" />
+        <activity android:name=".FlowActivity" />
     </application>
 
 </manifest>
