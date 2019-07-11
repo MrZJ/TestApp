@@ -68,21 +68,21 @@ public class BezierView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         mPath.reset();
-//        // 控制点和控制点连线
-//        int size = mControlPoints.size();
-//        PointF point;
-//        for (int i = 0; i < size; i++) {
-//            point = mControlPoints.get(i);
-//            if (i > 0) {
-//                // 控制点连线
-//                canvas.drawLine(mControlPoints.get(i - 1).x, mControlPoints.get(i - 1).y, point.x, point.y, mLinePointPaint);
-//            }
-//            // 控制点
-//            canvas.drawCircle(point.x, point.y, 12, mLinePointPaint);
-//        }
-//
-//        buildBezierPoints();
-//        canvas.drawPath(mPath, mPaint);
+        // 控制点和控制点连线
+        int size = mControlPoints.size();
+        PointF point;
+        for (int i = 0; i < size; i++) {
+            point = mControlPoints.get(i);
+            if (i > 0) {
+                // 控制点连线
+                canvas.drawLine(mControlPoints.get(i - 1).x, mControlPoints.get(i - 1).y, point.x, point.y, mLinePointPaint);
+            }
+            // 控制点
+            canvas.drawCircle(point.x, point.y, 12, mLinePointPaint);
+        }
+
+        buildBezierPoints();
+        canvas.drawPath(mPath, mPaint);
 
 
         //
@@ -139,14 +139,13 @@ public class BezierView extends View {
 //        mPath.rQuadTo(200, -400, 500, 0);
 ////
 ////
-//        //画三阶贝塞尔曲线
+        //画三阶贝塞尔曲线
 //        mPath.moveTo(300, 500);
 ////        mPath.cubicTo(500, 100, 600, 1200, 800, 500);
 //        //参数表示相对位置，等同于上面一行代码
 //        mPath.rCubicTo(200, -400, 300, 700, 500, 0);
 
-
-        canvas.drawPath(mPath, mPaint);
+//        canvas.drawPath(mPath, mPaint);
 
     }
 

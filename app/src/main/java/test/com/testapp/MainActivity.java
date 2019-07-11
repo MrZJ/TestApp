@@ -1,12 +1,18 @@
 package test.com.testapp;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.Spanned;
 import android.util.Log;
+import android.util.Property;
 import android.view.View;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.OvershootInterpolator;
 import android.widget.EditText;
 import android.widget.ImageView;
 
@@ -28,12 +34,14 @@ import test.com.commenlib.service.GlobalService;
 public class MainActivity extends AppCompatActivity {
     @InjectView(getViewId = R.id.et)
     private EditText et;
+    ObjectAnimator animator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         InjectManager.inject(this);
         EventBus.getInstance().regist(this);
+
     }
 
     public void login(View view) {
@@ -81,6 +89,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void goFlowLayout(View view) {
         Intent intent = new Intent(this, FlowActivity.class);
+        startActivity(intent);
+    }
+
+    public void goTaoBao(View view) {
+        Intent intent = new Intent(this, VLayoutActivity.class);
         startActivity(intent);
     }
 

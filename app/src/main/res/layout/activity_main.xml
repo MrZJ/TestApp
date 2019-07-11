@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="goPathMeasure"
-            android:text="跳转到PathMesure" />
+            android:text="跳转到PathMeasure" />
 
         <Button
             android:layout_width="match_parent"
@@ -74,5 +74,11 @@
             android:onClick="goFlowLayout"
             android:text="自定义FlowLayout" />
 
+        <Button
+            android:id="@+id/testAnimation"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:onClick="goTaoBao"
+            android:text="阿里开源VLayout实现淘宝首页" />
     </LinearLayout>
 </ScrollView>
